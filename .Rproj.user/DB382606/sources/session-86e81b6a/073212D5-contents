@@ -18,6 +18,12 @@ total_samples <- nrow(soilP)
 #discussion for group: do we want to exclude sites outside of the Erie basin?
 
 #calculate PSR as ratio among M3 parameters
+soilP <- soilP %>%
+  mutate(PSR = (m3_p_mgkg / 31)/ ((m3_fe_mgkg / 56)+(m3_al_mgkg / 27)))
+
 #plot WEX (y) against PSR (x)
+p <- ggplot(soilP, aes(PSR, wex_po4_mgkg)) +
+  geom_point()
+p
 #run regression
 #find change point
