@@ -15,6 +15,8 @@ soilP <- soilP %>%
 total_samples <- nrow(soilP)
 #1884
 
+#discussion for group: do we want to exclude sites outside of the Erie basin?
+
 #calculate PSR as ratio among M3 parameters
 #plot WEX (y) against PSR (x)
 #run regression
